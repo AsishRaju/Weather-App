@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <div class="container my-5 mx-auto">
+        <h1 class="text-dark text-center my-4 head-text ">Weather App🌤</h1>
+        <form  class="change-location my-4 text-center text-success font-weight-bold">
+            <label for="city">
+                Enter a 📍 for Weather information
+            </label>
+            <input type="text" name="city"  class="form-control p-4" autofocus>
+        </form>
+        <div class="card shadow-lg rounded d-none">
+            <img src="img/day.svg" class="time card-img-top">
+            <div class="icon bg-light mx-auto text-center">
+                <img src="img/icons/1.svg" alt="">
+            </div>
+            <div class="text-muted text-uppercase text-center details">
+                <h5 class="my-3">
+                    City Name
+                </h5>
+                <div class="my-3">Weather Conditon</div>
+                <div class="display-4 my-4">
+                    <span>temp</span>
+                    <span>&deg;C</span>
+                </div>
+            </div>
+        </div>
+        <img src="https://forthebadge.com/images/badges/made-with-javascript.svg" alt="" class="mx-auto d-block" style="margin-top: 10px;">   
+        <div class="text-center space">
+            <a href="https://github.com/AsishRaju?tab=repositories" class="badge badge-light">Asish.io ⚡</a>
+        </div>
+        <div class="text-center spacev2">
+            <a href="https://developer.accuweather.com/" class="badge badge-dark">⚡ Powered by Accuweather API 👌</a>
+        </div>
+    </div>
+
+
+    <script src="scripts/app(api).js"></script>
+    <script src="scripts/app(dom).js"></script>
+</body>
+</html>

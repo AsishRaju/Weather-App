@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+body{
+    
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+    transition: all 0.8s;
+}
+/* 0e2432 bg color*/
+/* #081d27 card color */
+/* #343a40 dark text color */
+/* #f8f9fa light text color */
+/* #6c757d muted text for day card*/
+.container{
+    max-width: 400px;
+}
+
+.icon{
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: -50px;
+}
+
+.space{
+    margin-top: 10px;
+}
+
+.spacev2{
+    margin-top: 40px;
+}
