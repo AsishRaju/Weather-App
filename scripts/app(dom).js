@@ -5,6 +5,7 @@ const card = document.querySelector('.card')
 const details =document.querySelector('.details')
 const timeimg = document.querySelector('img.time')
 const icon = document.querySelector('.icon img')
+const forcast = new Forcast()
 
 
 const updateUI=(data)=>{
@@ -91,20 +92,6 @@ function updateColor(time){
     }
 }
 
-
-
-
-
-
-const updateCity = async (city)=>{
-    // console.log(city)
-    const cityData = await getCity(city)
-    const weather = await getWeather(cityData.Key)
-
-    return { cityData,weather }
-
-}
-
 input.addEventListener('submit',(e)=>{
     
     e.preventDefault()
@@ -112,12 +99,13 @@ input.addEventListener('submit',(e)=>{
     localStorage.setItem('city',city)
     input.reset()
     input.city.blur()
-    updateCity(city).then(data => updateUI(data))
+    forcast.updateCity(city).then(data => updateUI(data))
                     .catch(err => console.log(err))
 })
 
 if(localStorage.getItem('city'))
 {
-    updateCity(localStorage.getItem('city')).then(data => updateUI(data))
-                                            .catch(err => console.log(err))
+    forcast.updateCity(localStorage.getItem('city'))
+        .then(data => updateUI(data))
+        .catch(err => console.log(err))
 }
