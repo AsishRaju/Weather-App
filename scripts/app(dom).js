@@ -109,8 +109,15 @@ input.addEventListener('submit',(e)=>{
     
     e.preventDefault()
     const city=input.city.value.trim()
+    localStorage.setItem('city',city)
     input.reset()
     input.city.blur()
     updateCity(city).then(data => updateUI(data))
                     .catch(err => console.log(err))
 })
+
+if(localStorage.getItem('city'))
+{
+    updateCity(localStorage.getItem('city')).then(data => updateUI(data))
+                                            .catch(err => console.log(err))
+}
