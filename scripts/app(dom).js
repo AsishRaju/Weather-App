@@ -16,7 +16,7 @@ const updateUI=(data)=>{
     //update details template
     details.innerHTML=`
     <h5 class="my-3">
-    ${cityData.EnglishName}
+    ${cityData.EnglishName},${cityData.Country.EnglishName}
     </h5>
     <div class="my-3">${weather.WeatherText}</div>
     <div class="display-4 my-4">
