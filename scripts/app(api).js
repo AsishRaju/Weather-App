@@ -1,4 +1,8 @@
+const spinner = document.querySelector(".spinner-border");
+
+
 class Forcast{
+
     constructor(){
         this.apiKey='jCLPUDFqHDZV7369qCF3gfHGutmpcVKG'
         this.weatherURI='https://dataservice.accuweather.com/currentconditions/v1/'
@@ -11,6 +15,7 @@ class Forcast{
     }
 
     async getCity(city){
+    spinner.classList.remove("d-none");
         const query= `?apikey=${this.apiKey}&q=${city}`
         const response =await fetch(this.cityURI+query)
         const data = await response.json()
@@ -22,7 +27,8 @@ class Forcast{
         const query =`${key}?apikey=${this.apiKey}`
         const response =await fetch(this.weatherURI+query)
         const data = await response.json()    
-        return data[0]
+        spinner.classList.add("d-none");
 
+        return data[0];
     }
 }
