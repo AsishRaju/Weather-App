@@ -3,7 +3,7 @@
 ### Check it out [here]!
 <img src="https://forthebadge.com/images/badges/made-with-javascript.svg"> 
 
- [here]:<https://asishraju.github.io/Weather-App>
+ [here]:<https://asishraju.me/Weather-App/>
 
 ## Overview 👀
 <img src="img/img.png">
